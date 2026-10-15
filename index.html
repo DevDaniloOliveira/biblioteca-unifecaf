@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca Digital UniFECAF: acervo de livros, e-books e materiais acadêmicos para apoiar os estudos dos alunos.">
+    <title>Biblioteca Digital UniFECAF</title>
+
+    <link rel="icon" href="assets/imagens/logo.svg" type="image/svg+xml">
+
+    <!-- Tipografia: Poppins (títulos) e Inter (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Link de acessibilidade: permite pular o menu usando o teclado -->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ========== CABEÇALHO / MENU ========== -->
+    <header class="cabecalho">
+        <div class="container cabecalho__conteudo">
+            <a class="logo" href="#inicio" aria-label="Biblioteca Digital UniFECAF - página inicial">
+                <img src="assets/imagens/logo.svg" alt="" width="40" height="40">
+                <span class="logo__texto">Biblioteca <strong>UniFECAF</strong></span>
+            </a>
+
+            <nav class="menu" aria-label="Menu principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__link menu__link--ativo" href="#biblioteca" aria-current="location">Biblioteca</a></li>
+                    <li><a class="menu__link" href="#livros">Livros</a></li>
+                    <li><a class="menu__link" href="#unidades">Unidades</a></li>
+                    <li><a class="menu__link" href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- ========== HERO (imagem principal) ========== -->
+        <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+            <div class="container hero__conteudo">
+                <p class="hero__chamada">Biblioteca Digital</p>
+                <h1 id="hero-titulo" class="hero__titulo">Seu acervo acadêmico, a qualquer hora e em qualquer lugar.</h1>
+                <p class="hero__texto">
+                    Livros, e-books, periódicos e materiais de apoio reunidos em um só lugar
+                    para você estudar no seu ritmo.
+                </p>
+                <div class="hero__acoes">
+                    <a class="botao botao--destaque" href="#livros">Explorar livros</a>
+                    <a class="botao botao--contorno" href="#biblioteca">Conheça a biblioteca</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SOBRE A NOSSA BIBLIOTECA ========== -->
+        <section class="secao secao--escura" id="biblioteca" aria-labelledby="sobre-titulo">
+            <div class="container">
+                <h2 id="sobre-titulo" class="secao__titulo">Sobre a nossa biblioteca</h2>
+
+                <div class="sobre">
+                    <p class="sobre__texto">
+                        A Biblioteca Digital UniFECAF nasceu para aproximar os estudantes do conhecimento.
+                        Aqui você encontra a bibliografia básica e complementar dos cursos de graduação,
+                        pós-graduação e cursos livres, organizada por área e pronta para consulta.
+                    </p>
+
+                    <img class="sobre__imagem" src="assets/imagens/sobre.svg"
+                         alt="Ilustração de um notebook exibindo a biblioteca digital sobre uma mesa com livros"
+                         width="600" height="400">
+
+                    <p class="sobre__texto">
+                        A plataforma funciona no computador, no tablet e no celular. Nossa equipe de
+                        bibliotecários oferece orientação de pesquisa, apoio na normalização de trabalhos
+                        acadêmicos (ABNT) e ajuda para encontrar o material certo para cada disciplina.
+                    </p>
+                </div>
+
+                <!-- Serviços oferecidos (as 4 imagens pequenas do protótipo) -->
+                <ul class="servicos" aria-label="Serviços da biblioteca">
+                    <li class="servico">
+                        <img src="assets/imagens/servico-acervo.svg" alt="" width="300" height="200">
+                        <h3 class="servico__titulo">Acervo físico</h3>
+                        <p class="servico__texto">Empréstimo de livros nas unidades presenciais.</p>
+                    </li>
+                    <li class="servico">
+                        <img src="assets/imagens/servico-ebooks.svg" alt="" width="300" height="200">
+                        <h3 class="servico__titulo">E-books</h3>
+                        <p class="servico__texto">Milhares de títulos para ler on-line.</p>
+                    </li>
+                    <li class="servico">
+                        <img src="assets/imagens/servico-estudo.svg" alt="" width="300" height="200">
+                        <h3 class="servico__titulo">Apoio à pesquisa</h3>
+                        <p class="servico__texto">Orientação para TCC e normas ABNT.</p>
+                    </li>
+                    <li class="servico">
+                        <img src="assets/imagens/servico-acesso.svg" alt="" width="300" height="200">
+                        <h3 class="servico__titulo">Acesso 24h</h3>
+                        <p class="servico__texto">Consulte o acervo digital quando quiser.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== BANNER ========== -->
+        <section class="banner" aria-label="Mensagem institucional">
+            <div class="container">
+                <blockquote class="banner__citacao">
+                    <p>“Ler é a ponte entre o que você sabe hoje e o que você vai construir amanhã.”</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ========== NOSSOS LIVROS ========== -->
+        <section class="secao secao--clara" id="livros" aria-labelledby="livros-titulo">
+            <div class="container">
+                <h2 id="livros-titulo" class="secao__titulo">Nossos livros</h2>
+                <p class="secao__subtitulo">Destaques do acervo, organizados por categoria.</p>
+
+                <div class="livros">
+                    <article class="livro">
+                        <span class="livro__categoria">Tecnologia</span>
+                        <h3 class="livro__nome">Fundamentos de Programação</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-programacao.svg"
+                             alt="Capa azul com símbolos de código" width="300" height="420">
+                        <p class="livro__descricao">Lógica, algoritmos e primeiros passos com programação estruturada.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: e-book e físico · 320 páginas · Disponível para empréstimo.</p>
+                        </details>
+                    </article>
+
+                    <article class="livro">
+                        <span class="livro__categoria">Design</span>
+                        <h3 class="livro__nome">Design de Interfaces</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-design.svg"
+                             alt="Capa verde com uma grade de quadrados" width="300" height="420">
+                        <p class="livro__descricao">Princípios de usabilidade, hierarquia visual e acessibilidade na web.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: e-book · 256 páginas · Leitura on-line.</p>
+                        </details>
+                    </article>
+
+                    <article class="livro">
+                        <span class="livro__categoria">Gestão</span>
+                        <h3 class="livro__nome">Gestão de Projetos</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-gestao.svg"
+                             alt="Capa azul-escura com um gráfico em crescimento" width="300" height="420">
+                        <p class="livro__descricao">Planejamento, cronogramas e métodos ágeis aplicados ao dia a dia.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: e-book e físico · 288 páginas · Disponível para empréstimo.</p>
+                        </details>
+                    </article>
+
+                    <article class="livro">
+                        <span class="livro__categoria">Exatas</span>
+                        <h3 class="livro__nome">Estatística Aplicada</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-estatistica.svg"
+                             alt="Capa roxa com gráfico de barras" width="300" height="420">
+                        <p class="livro__descricao">Análise de dados, probabilidade e interpretação de resultados.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: e-book · 340 páginas · Leitura on-line.</p>
+                        </details>
+                    </article>
+
+                    <article class="livro">
+                        <span class="livro__categoria">Negócios</span>
+                        <h3 class="livro__nome">Marketing Digital</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-marketing.svg"
+                             alt="Capa laranja com um alvo" width="300" height="420">
+                        <p class="livro__descricao">Estratégias de conteúdo, redes sociais e métricas de desempenho.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: e-book e físico · 210 páginas · Disponível para empréstimo.</p>
+                        </details>
+                    </article>
+
+                    <article class="livro">
+                        <span class="livro__categoria">Direito</span>
+                        <h3 class="livro__nome">Direito Empresarial</h3>
+                        <img class="livro__capa" src="assets/imagens/livro-direito.svg"
+                             alt="Capa cinza com uma balança da justiça" width="300" height="420">
+                        <p class="livro__descricao">Conceitos essenciais sobre empresas, contratos e sociedades.</p>
+                        <details class="livro__detalhes">
+                            <summary class="botao botao--pequeno">Saiba mais</summary>
+                            <p>Formato: físico · 400 páginas · Consulta nas unidades.</p>
+                        </details>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== AS UNIDADES ========== -->
+        <section class="secao secao--profunda" id="unidades" aria-labelledby="unidades-titulo">
+            <div class="container">
+                <h2 id="unidades-titulo" class="secao__titulo">As unidades</h2>
+
+                <div class="unidades">
+                    <article class="unidade">
+                        <img class="unidade__imagem" src="assets/imagens/unidade-campus.svg"
+                             alt="Ilustração do prédio do campus" width="600" height="400">
+                        <div class="unidade__texto">
+                            <h3 class="unidade__nome">Unidade 1 — Campus Taboão da Serra</h3>
+                            <p>
+                                Biblioteca central com acervo físico completo, salas de estudo em grupo,
+                                computadores para pesquisa e atendimento presencial com bibliotecários.
+                            </p>
+                            <p class="unidade__horario">Segunda a sexta, das 8h às 22h · Sábado, das 8h às 13h</p>
+                        </div>
+                    </article>
+
+                    <article class="unidade">
+                        <img class="unidade__imagem" src="assets/imagens/unidade-polo.svg"
+                             alt="Ilustração de um polo de apoio presencial" width="600" height="400">
+                        <div class="unidade__texto">
+                            <h3 class="unidade__nome">Unidade 2 — Polos de Apoio Presencial</h3>
+                            <p>
+                                Pontos de atendimento para alunos EAD, com retirada e devolução de livros,
+                                espaço de leitura silenciosa e suporte para acesso à plataforma digital.
+                            </p>
+                            <p class="unidade__horario">Horários variam conforme o polo</p>
+                        </div>
+                    </article>
+
+                    <article class="unidade">
+                        <img class="unidade__imagem" src="assets/imagens/unidade-virtual.svg"
+                             alt="Ilustração de um computador exibindo a biblioteca virtual" width="600" height="400">
+                        <div class="unidade__texto">
+                            <h3 class="unidade__nome">Unidade 3 — Biblioteca Virtual</h3>
+                            <p>
+                                Acesso on-line ao acervo de e-books, periódicos e bases de dados científicas.
+                                Basta entrar com o login do portal do aluno, em qualquer dispositivo.
+                            </p>
+                            <p class="unidade__horario">Disponível 24 horas, 7 dias por semana</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTATOS ========== -->
+        <section class="secao secao--suave" id="contatos" aria-labelledby="contatos-titulo">
+            <div class="container">
+                <h2 id="contatos-titulo" class="secao__titulo">Contatos</h2>
+
+                <div class="contatos">
+                    <div class="contatos__texto">
+                        <p>
+                            Ficou com alguma dúvida sobre empréstimos, renovações ou acesso à biblioteca
+                            digital? Nossa equipe está pronta para ajudar.
+                        </p>
+
+                        <address class="contatos__lista">
+                            <p><strong>E-mail:</strong> biblioteca@unifecaf.edu.br</p>
+                            <p><strong>Telefone:</strong> (11) 0000-0000</p>
+                            <p><strong>Endereço:</strong> Taboão da Serra, SP</p>
+                        </address>
+
+                        <p>
+                            Para solicitações de materiais que ainda não estão no acervo, envie o título,
+                            o autor e a disciplina por e-mail. Avaliamos cada pedido semestralmente.
+                        </p>
+                    </div>
+
+                    <img class="contatos__imagem" src="assets/imagens/contato.svg"
+                         alt="Mapa ilustrativo com marcador de localização" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <p>&copy; 2026 Biblioteca Digital UniFECAF. Projeto acadêmico da disciplina Design Web.</p>
+            <a class="rodape__topo" href="#inicio">Voltar ao topo ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>

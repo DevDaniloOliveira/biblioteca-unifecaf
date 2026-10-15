@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" width="1600" height="420" role="img"><title>Padrão gráfico verde com ondas</title>
+<rect width="1600" height="420" fill="#1C9A5E"/>
+<g fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3">
+<path d="M-100 420c40-60 100-60 140 0" /><path d="M-30 0c40 60 100 60 140 0"/><path d="M40 420c40-60 100-60 140 0" /><path d="M110 0c40 60 100 60 140 0"/><path d="M180 420c40-60 100-60 140 0" /><path d="M250 0c40 60 100 60 140 0"/><path d="M320 420c40-60 100-60 140 0" /><path d="M390 0c40 60 100 60 140 0"/><path d="M460 420c40-60 100-60 140 0" /><path d="M530 0c40 60 100 60 140 0"/><path d="M600 420c40-60 100-60 140 0" /><path d="M670 0c40 60 100 60 140 0"/><path d="M740 420c40-60 100-60 140 0" /><path d="M810 0c40 60 100 60 140 0"/><path d="M880 420c40-60 100-60 140 0" /><path d="M950 0c40 60 100 60 140 0"/><path d="M1020 420c40-60 100-60 140 0" /><path d="M1090 0c40 60 100 60 140 0"/><path d="M1160 420c40-60 100-60 140 0" /><path d="M1230 0c40 60 100 60 140 0"/><path d="M1300 420c40-60 100-60 140 0" /><path d="M1370 0c40 60 100 60 140 0"/><path d="M1440 420c40-60 100-60 140 0" /><path d="M1510 0c40 60 100 60 140 0"/><path d="M1580 420c40-60 100-60 140 0" /><path d="M1650 0c40 60 100 60 140 0"/>
+</g>
+<circle cx="140" cy="80" r="160" fill="#0B2545" opacity=".18"/><circle cx="1480" cy="380" r="200" fill="#0B2545" opacity=".18"/>
+</svg>

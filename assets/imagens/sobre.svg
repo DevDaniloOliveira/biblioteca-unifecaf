@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"><title>Notebook exibindo a biblioteca digital sobre uma mesa com livros</title>
+<rect width="600" height="400" fill="#F4F7FB"/>
+<circle cx="470" cy="90" r="70" fill="#2BB673" opacity=".2"/>
+<rect x="60" y="300" width="480" height="16" rx="6" fill="#0B2545"/>
+<rect x="170" y="170" width="260" height="140" rx="10" fill="#0B2545"/>
+<rect x="182" y="182" width="236" height="110" rx="6" fill="#CFE3FA"/>
+<rect x="200" y="200" width="70" height="90" rx="4" fill="#0D5DB8"/>
+<rect x="280" y="205" width="120" height="10" rx="5" fill="#0D5DB8"/>
+<rect x="280" y="225" width="100" height="8" rx="4" fill="#fff"/>
+<rect x="280" y="240" width="110" height="8" rx="4" fill="#fff"/>
+<rect x="280" y="262" width="60" height="18" rx="9" fill="#2BB673"/>
+<rect x="140" y="292" width="320" height="12" rx="6" fill="#33496B"/>
+<rect x="70" y="210" width="34" height="90" rx="3" fill="#2BB673"/><rect x="106" y="230" width="30" height="70" rx="3" fill="#F2B544"/>
+<rect x="470" y="250" width="56" height="50" rx="8" fill="#fff" stroke="#0B2545" stroke-width="6"/>
+<path d="M526 262c18 0 18 26 0 26" fill="none" stroke="#0B2545" stroke-width="6"/>
+</svg>

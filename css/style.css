@@ -1,0 +1,688 @@
+/* ==========================================================
+   Biblioteca Digital UniFECAF — folha de estilos
+   Abordagem mobile-first: os estilos base valem para celular
+   e as media queries no final adaptam para telas maiores.
+   ========================================================== */
+
+
+/* ---------- 1. Variáveis (paleta, tipografia e espaçamentos) ---------- */
+:root {
+    /* Paleta baseada na identidade visual da UniFECAF (azul + verde) */
+    --azul-marinho: #0B2545;   /* fundos escuros: menu, unidades, rodapé */
+    --azul: #0D5DB8;           /* cor principal da marca */
+    --azul-claro: #CFE3FA;     /* detalhes e fundos suaves */
+    --verde: #2BB673;          /* cor de destaque (botões, marcadores) */
+    --verde-escuro: #1C7A4C;   /* banner e textos verdes sobre fundo claro */
+    --cinza-fundo: #F4F7FB;    /* fundo das seções claras */
+    --cinza-borda: #DCE4EE;
+    --texto: #1B2430;          /* texto principal sobre fundo claro */
+    --texto-suave: #4A5568;
+    --branco: #FFFFFF;
+
+    --fonte-titulo: "Poppins", "Segoe UI", Arial, sans-serif;
+    --fonte-texto: "Inter", "Segoe UI", Arial, sans-serif;
+
+    --raio: 12px;
+    --sombra: 0 6px 20px rgba(11, 37, 69, 0.12);
+    --espaco-secao: 4rem;
+}
+
+
+/* ---------- 2. Reset e estilos gerais ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Compensa o menu fixo ao navegar pelas âncoras */
+    scroll-padding-top: 7rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--branco);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.25;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+/* Foco bem visível para quem navega pelo teclado */
+:focus-visible {
+    outline: 3px solid var(--verde);
+    outline-offset: 3px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+
+/* ---------- 3. Acessibilidade: link "pular para o conteúdo" ---------- */
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--verde);
+    color: var(--azul-marinho);
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
+}
+
+.pular-conteudo:focus {
+    top: 0;
+}
+
+
+/* ---------- 4. Botões ---------- */
+.botao {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao--destaque {
+    background-color: var(--verde);
+    color: var(--azul-marinho);
+}
+
+.botao--destaque:hover {
+    background-color: var(--branco);
+}
+
+.botao--contorno {
+    border-color: var(--branco);
+    color: var(--branco);
+}
+
+.botao--contorno:hover {
+    background-color: var(--branco);
+    color: var(--azul-marinho);
+}
+
+.botao--pequeno {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+.botao--pequeno:hover {
+    background-color: var(--azul-marinho);
+}
+
+
+/* ---------- 5. Cabeçalho e menu ---------- */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--azul-marinho);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.logo__texto {
+    font-family: var(--fonte-titulo);
+    font-size: 1.1rem;
+}
+
+.logo__texto strong {
+    color: var(--verde);
+}
+
+.menu__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.125rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__link {
+    display: block;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.menu__link:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Item ativo: no protótipo aparece com fundo destacado */
+.menu__link--ativo {
+    background-color: var(--verde);
+    color: var(--azul-marinho);
+}
+
+.menu__link--ativo:hover {
+    background-color: var(--verde);
+}
+
+
+/* ---------- 6. Hero ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    padding: 4rem 0;
+    color: var(--branco);
+    /* Gradiente sobre a imagem garante contraste do texto */
+    background:
+        linear-gradient(90deg, rgba(11, 37, 69, 0.95) 0%, rgba(11, 37, 69, 0.75) 60%, rgba(11, 37, 69, 0.4) 100%),
+        url("../assets/imagens/hero.svg") center right / cover no-repeat;
+}
+
+.hero__chamada {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    background-color: rgba(43, 182, 115, 0.2);
+    color: var(--verde);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero__titulo {
+    max-width: 18ch;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero__texto {
+    max-width: 46ch;
+    margin: 1.25rem 0 2rem;
+    font-size: 1.1rem;
+    color: #E3ECF7;
+}
+
+.hero__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+
+/* ---------- 7. Seções (estrutura comum) ---------- */
+.secao {
+    padding: var(--espaco-secao) 0;
+}
+
+.secao__titulo {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+/* Pequena barra verde abaixo dos títulos para reforçar a identidade */
+.secao__titulo::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 0.75rem;
+    border-radius: 2px;
+    background-color: var(--verde);
+}
+
+.secao__subtitulo {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: var(--texto-suave);
+}
+
+/* Variações de fundo (seguem a alternância claro/escuro do protótipo) */
+.secao--escura {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+.secao--clara {
+    background-color: var(--cinza-fundo);
+}
+
+.secao--profunda {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.secao--suave {
+    background-color: var(--azul-claro);
+}
+
+
+/* ---------- 8. Sobre a nossa biblioteca ---------- */
+.sobre {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sobre__texto {
+    margin: 0;
+}
+
+.sobre__imagem {
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 3rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.servico {
+    overflow: hidden;
+    border-radius: var(--raio);
+    background-color: var(--branco);
+    color: var(--texto);
+    box-shadow: var(--sombra);
+}
+
+.servico img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.servico__titulo {
+    padding: 0.75rem 1rem 0.25rem;
+    font-size: 1rem;
+    color: var(--azul);
+}
+
+.servico__texto {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+}
+
+
+/* ---------- 9. Banner ---------- */
+.banner {
+    padding: 4rem 0;
+    color: var(--branco);
+    text-align: center;
+    background:
+        linear-gradient(rgba(28, 122, 76, 0.85), rgba(28, 122, 76, 0.85)),
+        url("../assets/imagens/banner.svg") center / cover no-repeat;
+}
+
+.banner__citacao {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.banner__citacao p {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* ---------- 10. Nossos livros (cards) ---------- */
+.livros {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid var(--cinza-borda);
+    border-radius: var(--raio);
+    background-color: var(--branco);
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.livro:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(11, 37, 69, 0.18);
+}
+
+.livro__categoria {
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    background-color: #E3F5EC;
+    color: var(--verde-escuro);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.livro__nome {
+    margin: 0.75rem 0 1rem;
+    font-size: 1.05rem;
+    color: var(--azul-marinho);
+}
+
+.livro__capa {
+    width: 140px;
+    aspect-ratio: 5 / 7;
+    object-fit: cover;
+    border-radius: 4px 8px 8px 4px;
+    box-shadow: var(--sombra);
+}
+
+.livro__descricao {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* "Saiba mais" usa <details>, que abre/fecha sem JavaScript */
+.livro__detalhes {
+    margin-top: auto;
+}
+
+.livro__detalhes summary {
+    list-style: none;
+}
+
+.livro__detalhes summary::-webkit-details-marker {
+    display: none;
+}
+
+.livro__detalhes p {
+    margin: 0.75rem 0 0;
+    font-size: 0.85rem;
+    color: var(--texto);
+}
+
+
+/* ---------- 11. As unidades ---------- */
+.unidades {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.unidade {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.unidade__imagem {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+.unidade__nome {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--verde);
+    letter-spacing: 0.03em;
+}
+
+.unidade__texto p {
+    color: #D9E3F0;
+}
+
+.unidade__horario {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-left: 3px solid var(--verde);
+    background-color: rgba(255, 255, 255, 0.06);
+    font-size: 0.875rem;
+}
+
+
+/* ---------- 12. Contatos ---------- */
+.contatos {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contatos__lista {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border-radius: var(--raio);
+    background-color: var(--branco);
+    font-style: normal;
+}
+
+.contatos__lista p {
+    margin: 0 0 0.4rem;
+    overflow-wrap: anywhere; /* evita que o e-mail corte em telas pequenas */
+}
+
+.contatos__lista p:last-child {
+    margin-bottom: 0;
+}
+
+.contatos__lista strong {
+    color: var(--azul);
+}
+
+.contatos__imagem {
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+
+/* ---------- 13. Rodapé ---------- */
+.rodape {
+    padding: 1.5rem 0;
+    background-color: #071830;
+    color: #C5D3E6;
+    font-size: 0.875rem;
+}
+
+.rodape__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape__topo {
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.rodape__topo:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+/* Tablets (a partir de 600px) */
+@media (min-width: 600px) {
+    .livros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero__titulo {
+        font-size: 2.5rem;
+    }
+
+    .unidade {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Desktop (a partir de 900px) — layout igual ao protótipo */
+@media (min-width: 900px) {
+    :root {
+        --espaco-secao: 5.5rem;
+    }
+
+    html {
+        scroll-padding-top: 5rem;
+    }
+
+    .menu__link {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .secao__titulo {
+        letter-spacing: 0.3em;
+    }
+
+    /* Logo à esquerda e menu à direita, como no protótipo */
+    .cabecalho__conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero__titulo {
+        font-size: 3.25rem;
+    }
+
+    /* Texto | imagem | texto */
+    .sobre {
+        grid-template-columns: 1fr 1.2fr 1fr;
+        gap: 2rem;
+    }
+
+    .servicos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .banner {
+        padding: 6rem 0;
+    }
+
+    .banner__citacao p {
+        font-size: 1.85rem;
+    }
+
+    /* 3 colunas x 2 linhas */
+    .livros {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .unidade {
+        grid-template-columns: 1fr 1.1fr;
+        gap: 3rem;
+    }
+
+    .contatos {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 3rem;
+    }
+
+    .rodape__conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+
+/* Respeita usuários que preferem menos animação */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

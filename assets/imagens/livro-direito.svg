@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420" role="img"><title>Capa ilustrativa de livro</title>
+<rect width="300" height="420" fill="#334155"/>
+<rect x="0" y="0" width="18" height="420" fill="#000" opacity=".18"/>
+<rect x="40" y="48" width="160" height="12" rx="6" fill="#fff" opacity=".9"/>
+<rect x="40" y="72" width="110" height="10" rx="5" fill="#fff" opacity=".55"/>
+<path d="M150 170v140M100 310h100M80 200h140" stroke="#fff" stroke-width="10" stroke-linecap="round"/><path d="M80 200l-28 60h56zM220 200l-28 60h56z" fill="#CFE3FA"/>
+<rect x="40" y="360" width="80" height="8" rx="4" fill="#CFE3FA"/>
+</svg>

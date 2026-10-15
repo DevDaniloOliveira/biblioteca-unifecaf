@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"><title>Mapa ilustrativo com marcador de localização</title>
+<rect width="600" height="400" fill="#F4F7FB"/>
+<path d="M0 260h600M0 120h600M180 0v400M420 0v400" stroke="#CFE3FA" stroke-width="22"/>
+<path d="M0 340l600-200" stroke="#fff" stroke-width="16"/>
+<path d="M300 90c-44 0-74 32-74 72 0 54 74 128 74 128s74-74 74-128c0-40-30-72-74-72z" fill="#0D5DB8"/>
+<circle cx="300" cy="164" r="28" fill="#fff"/>
+<ellipse cx="300" cy="300" rx="50" ry="10" fill="#0B2545" opacity=".2"/>
+</svg>
